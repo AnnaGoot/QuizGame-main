@@ -168,9 +168,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   use: 1
   shakeDuration: 0.5
-  shakeStrength: 10
-  shakeVibration: 30
-  shakeRandom: 50
+  shakeStrength: {x: 20, y: 0, z: 0}
+  shakeVibration: 40
+  elasticity: 5
 --- !u!1 &524831847479255049
 GameObject:
   m_ObjectHideFlags: 0

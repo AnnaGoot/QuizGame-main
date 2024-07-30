@@ -9,10 +9,9 @@ namespace View
     {
         [SerializeField] private bool use = true;
         [SerializeField] private float shakeDuration = 0.5f;
-        [SerializeField] private float shakeStrength = 10f;
+        [SerializeField] private Vector3 shakeStrength = new Vector3(1.0f, 0.0f, 0.0f) ;
         [SerializeField] private int shakeVibration = 30;
-        [SerializeField] private float shakeRandom = 50f;
-        private Tween currentTween;
+        [SerializeField] private float elasticity = 1f;
 
         public void Notify(bool correct)
         {
@@ -22,7 +21,7 @@ namespace View
             }
 
             transform.DOKill();
-            currentTween = transform.DOShakePosition(shakeDuration, shakeStrength, shakeVibration, shakeRandom);
+            transform.DOPunchPosition(shakeStrength, shakeDuration, shakeVibration, elasticity);
         }
 
     }
