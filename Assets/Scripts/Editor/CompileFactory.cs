@@ -16,6 +16,10 @@ namespace Compiles
                 new ExtentionFolderCompileFactory(
                     new APKCompileFactory(),
                     ".apk"
+                    ),
+                 new ExtentionFolderCompileFactory(
+                    new AABCompileFactory(),
+                    ".aab"
                     )
                     ).Compile(
                     EditorUtility.OpenFolderPanel(
