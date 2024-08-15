@@ -20,7 +20,11 @@ namespace Compiles
                  new ExtentionFolderCompileFactory(
                     new AABCompileFactory(),
                     ".aab"
-                    )
+                    ),
+                 new ExtentionFolderCompileFactory(
+                     new WebGLCompileFactory(),
+                     ""
+                     )
                     ).Compile(
                     EditorUtility.OpenFolderPanel(
                         "Choose Folder", "Assets", "Build"
